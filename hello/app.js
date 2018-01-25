@@ -12,6 +12,7 @@ var hello = require('./routes/hello');
 
 var app = express();
 
+
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
@@ -33,7 +34,9 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
+
 app.get('/', hello.view);
+
 
 app.get('/hello/:userName', hello.view);
 
